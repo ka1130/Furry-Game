@@ -13,7 +13,7 @@
       this.y = Math.floor(Math.random() * 10);
     };
 
-    var Board = function (board, furry, coin, score) {
+    var Game = function (board, furry, coin, score) {
       this.board = document.getElementById("board").children;
       this.furry = new Furry();
       this.coin = new Coin();
@@ -21,7 +21,7 @@
     };
 
 
-    console.log(Board);
+    console.log(Game);
 
 
     //end
