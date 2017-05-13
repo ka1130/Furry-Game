@@ -2,25 +2,26 @@
 
   document.addEventListener("DOMContentLoaded", function (event) {
 
-    var Furry = function (x, y, dir) {
-      this.x = x;
-      this.y = y;
-      this.dir = dir;
+    var Furry = function () {
+      this.x;
+      this.y;
+      this.dir;
     };
 
-    var Coin = function (x, y) {
-      this.x = x;
-      this.y = y;
+    var Coin = function () {
+      this.x = Math.floor(Math.random() * 10);
+      this.y = Math.floor(Math.random() * 10);
     };
 
     var Board = function (board, furry, coin, score) {
-
+      this.board = document.getElementById("board").children;
+      this.furry = new Furry();
+      this.coin = new Coin();
+      this.score = 0;
     };
 
-    var myFurry = new Furry(0, 0, "right");
-    var myCoin = new Coin((Math.floor(Math.random() * 10)), (Math.floor(Math.random() * 10)));
 
-    console.log(myFurry, myCoin);
+    console.log(Board);
 
 
     //end
